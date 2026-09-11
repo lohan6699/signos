@@ -13,21 +13,32 @@
 </head>
 <body>
   <div class="sky" aria-hidden="true">
+    <div class="aurora"></div>
+    <div class="sunburst"></div>
     <div class="stars"></div>
     <div class="stars2"></div>
     <div class="nebula"></div>
     <div class="columns"><span></span><span></span></div>
+    <div class="floor"></div>
+    <div class="grain"></div>
   </div>
 
   <main class="wrap">
     <header class="hero">
+      <div class="pediment" aria-hidden="true">
+        <span class="pediment-line"></span>
+        <span class="owl">★</span>
+        <span class="pediment-line"></span>
+      </div>
       <p class="eyebrow">Santuário de Atena</p>
       <div class="athena-star" aria-hidden="true">★</div>
       <h1>Cavaleiros do <span>Zodíaco</span></h1>
       <p class="subtitle">Descubra a Casa de Ouro que guarda o seu signo e a armadura que combina com o seu cosmo.</p>
     </header>
 
-    <section class="card" aria-labelledby="oracle-label">
+    <section class="card oracle-card" aria-labelledby="oracle-label">
+      <span class="corner tl"></span><span class="corner tr"></span>
+      <span class="corner bl"></span><span class="corner br"></span>
       <label id="oracle-label" for="birthdate">Data de nascimento do cavaleiro</label>
       <div class="input-row">
         <input type="date" id="birthdate" required />
@@ -37,22 +48,26 @@
     </section>
 
     <nav class="houses" id="houses" aria-label="Doze Casas do Santuário">
-      <button type="button" class="house-btn" data-sign="aries" title="Áries">♈</button>
-      <button type="button" class="house-btn" data-sign="taurus" title="Touro">♉</button>
-      <button type="button" class="house-btn" data-sign="gemini" title="Gêmeos">♊</button>
-      <button type="button" class="house-btn" data-sign="cancer" title="Câncer">♋</button>
-      <button type="button" class="house-btn" data-sign="leo" title="Leão">♌</button>
-      <button type="button" class="house-btn" data-sign="virgo" title="Virgem">♍</button>
-      <button type="button" class="house-btn" data-sign="libra" title="Libra">♎</button>
-      <button type="button" class="house-btn" data-sign="scorpio" title="Escorpião">♏</button>
-      <button type="button" class="house-btn" data-sign="sagittarius" title="Sagitário">♐</button>
-      <button type="button" class="house-btn" data-sign="capricorn" title="Capricórnio">♑</button>
-      <button type="button" class="house-btn" data-sign="aquarius" title="Aquário">♒</button>
-      <button type="button" class="house-btn" data-sign="pisces" title="Peixes">♓</button>
+      <button type="button" class="house-btn" data-sign="aries" title="Áries"><span>♈</span></button>
+      <button type="button" class="house-btn" data-sign="taurus" title="Touro"><span>♉</span></button>
+      <button type="button" class="house-btn" data-sign="gemini" title="Gêmeos"><span>♊</span></button>
+      <button type="button" class="house-btn" data-sign="cancer" title="Câncer"><span>♋</span></button>
+      <button type="button" class="house-btn" data-sign="leo" title="Leão"><span>♌</span></button>
+      <button type="button" class="house-btn" data-sign="virgo" title="Virgem"><span>♍</span></button>
+      <button type="button" class="house-btn" data-sign="libra" title="Libra"><span>♎</span></button>
+      <button type="button" class="house-btn" data-sign="scorpio" title="Escorpião"><span>♏</span></button>
+      <button type="button" class="house-btn" data-sign="sagittarius" title="Sagitário"><span>♐</span></button>
+      <button type="button" class="house-btn" data-sign="capricorn" title="Capricórnio"><span>♑</span></button>
+      <button type="button" class="house-btn" data-sign="aquarius" title="Aquário"><span>♒</span></button>
+      <button type="button" class="house-btn" data-sign="pisces" title="Peixes"><span>♓</span></button>
     </nav>
 
     <section class="awakening hidden" id="awakening" aria-hidden="true">
-      <div class="cosmos-ring"></div>
+      <div class="cosmos">
+        <div class="cosmos-ring"></div>
+        <div class="cosmos-ring delay"></div>
+        <div class="cosmos-core">★</div>
+      </div>
       <p>O cosmo está despertando…</p>
     </section>
 
