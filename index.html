@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Descubra qual Casa de Ouro do Santuário de Atena corresponde ao seu signo e desperte o seu cosmo." />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#070504" />
   <title>Santuário — Cavaleiros do Zodíaco</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>★</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,7 +33,7 @@
       <div class="temple-roof" aria-hidden="true"></div>
       <div class="pediment">
         <span class="pediment-line"></span>
-        <span class="owl">★</span>
+        <span class="owl" aria-hidden="true">★</span>
         <span class="pediment-line"></span>
       </div>
       <p class="eyebrow">Santuário de Atena</p>
@@ -41,30 +43,30 @@
     </header>
 
     <section class="card oracle-card" aria-labelledby="oracle-label">
-      <span class="meander"></span>
-      <span class="corner tl"></span><span class="corner tr"></span>
-      <span class="corner bl"></span><span class="corner br"></span>
+      <span class="meander" aria-hidden="true"></span>
+      <span class="corner tl" aria-hidden="true"></span><span class="corner tr" aria-hidden="true"></span>
+      <span class="corner bl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
       <label id="oracle-label" for="birthdate">Data de nascimento do cavaleiro</label>
       <div class="input-row">
-        <input type="date" id="birthdate" required />
+        <input type="date" id="birthdate" required aria-describedby="oracle-hint" />
         <button type="button" id="discover-btn">Despertar o Cosmo</button>
       </div>
-      <p class="hint">O oráculo usa só o dia e o mês para abrir a Casa correspondente.</p>
+      <p class="hint" id="oracle-hint">O oráculo usa só o dia e o mês para abrir a Casa correspondente.</p>
     </section>
 
-    <nav class="houses" id="houses" aria-label="Doze Casas do Santuário">
-      <button type="button" class="house-btn" data-sign="aries" title="Áries"><span>♈</span></button>
-      <button type="button" class="house-btn" data-sign="taurus" title="Touro"><span>♉</span></button>
-      <button type="button" class="house-btn" data-sign="gemini" title="Gêmeos"><span>♊</span></button>
-      <button type="button" class="house-btn" data-sign="cancer" title="Câncer"><span>♋</span></button>
-      <button type="button" class="house-btn" data-sign="leo" title="Leão"><span>♌</span></button>
-      <button type="button" class="house-btn" data-sign="virgo" title="Virgem"><span>♍</span></button>
-      <button type="button" class="house-btn" data-sign="libra" title="Libra"><span>♎</span></button>
-      <button type="button" class="house-btn" data-sign="scorpio" title="Escorpião"><span>♏</span></button>
-      <button type="button" class="house-btn" data-sign="sagittarius" title="Sagitário"><span>♐</span></button>
-      <button type="button" class="house-btn" data-sign="capricorn" title="Capricórnio"><span>♑</span></button>
-      <button type="button" class="house-btn" data-sign="aquarius" title="Aquário"><span>♒</span></button>
-      <button type="button" class="house-btn" data-sign="pisces" title="Peixes"><span>♓</span></button>
+    <nav class="houses" id="houses" aria-label="Doze Casas do Santuário — escolha um signo diretamente">
+      <button type="button" class="house-btn" data-sign="aries" aria-label="Casa de Áries" aria-pressed="false"><span aria-hidden="true">♈</span></button>
+      <button type="button" class="house-btn" data-sign="taurus" aria-label="Casa de Touro" aria-pressed="false"><span aria-hidden="true">♉</span></button>
+      <button type="button" class="house-btn" data-sign="gemini" aria-label="Casa de Gêmeos" aria-pressed="false"><span aria-hidden="true">♊</span></button>
+      <button type="button" class="house-btn" data-sign="cancer" aria-label="Casa de Câncer" aria-pressed="false"><span aria-hidden="true">♋</span></button>
+      <button type="button" class="house-btn" data-sign="leo" aria-label="Casa de Leão" aria-pressed="false"><span aria-hidden="true">♌</span></button>
+      <button type="button" class="house-btn" data-sign="virgo" aria-label="Casa de Virgem" aria-pressed="false"><span aria-hidden="true">♍</span></button>
+      <button type="button" class="house-btn" data-sign="libra" aria-label="Casa de Libra" aria-pressed="false"><span aria-hidden="true">♎</span></button>
+      <button type="button" class="house-btn" data-sign="scorpio" aria-label="Casa de Escorpião" aria-pressed="false"><span aria-hidden="true">♏</span></button>
+      <button type="button" class="house-btn" data-sign="sagittarius" aria-label="Casa de Sagitário" aria-pressed="false"><span aria-hidden="true">♐</span></button>
+      <button type="button" class="house-btn" data-sign="capricorn" aria-label="Casa de Capricórnio" aria-pressed="false"><span aria-hidden="true">♑</span></button>
+      <button type="button" class="house-btn" data-sign="aquarius" aria-label="Casa de Aquário" aria-pressed="false"><span aria-hidden="true">♒</span></button>
+      <button type="button" class="house-btn" data-sign="pisces" aria-label="Casa de Peixes" aria-pressed="false"><span aria-hidden="true">♓</span></button>
     </nav>
 
     <section class="awakening hidden" id="awakening" aria-hidden="true">
@@ -77,7 +79,7 @@
       <p>O cosmo está despertando…</p>
     </section>
 
-    <section class="result hidden" id="result" aria-live="polite"></section>
+    <section class="result hidden" id="result" tabindex="-1" aria-live="polite"></section>
     <footer>Inspirado no universo dos Cavaleiros de Ouro · Feito com HTML, CSS e JS</footer>
   </main>
   <script src="script.js"></script>
