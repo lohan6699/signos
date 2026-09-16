@@ -133,7 +133,14 @@ function resetOracle() {
   result.innerHTML = "";
   document.getElementById("awakening").classList.add("hidden");
   highlightHouse(null);
-  document.getElementById("birthdate").focus();
+  const birthdate = document.getElementById("birthdate");
+  birthdate.value = "";
+  try {
+    localStorage.removeItem("santuario:lastBirthdate");
+  } catch (e) {
+    /* private browsing or storage disabled — safe to ignore */
+  }
+  birthdate.focus();
 }
 
 function awaken(sign) {
